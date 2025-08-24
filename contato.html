@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato | Loja Tech</title>
+</head>
+<body>
+  <header>
+    <h1>Loja Tech - Eletrônicos — Contato</h1>
+  </header>
+
+  <nav aria-label="Navegação principal">
+    <a href="index.html">Home</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="contato.html" aria-current="page">Contato</a>
+  </nav>
+
+  <main>
+    <section class="card" aria-labelledby="titulo-form">
+      <h2 id="titulo-form">Fale Conosco</h2>
+      <p class="hint">Todos os campos marcados com <span class="required">*</span> são obrigatórios.</p>
+
+      <form action="#" method="post" autocomplete="on" novalidate>
+        <fieldset>
+          <legend>Dados do solicitante</legend>
+          <table role="presentation">
+            <tr>
+              <td class="label"><label for="nome">Nome completo <span class="required">*</span></label></td>
+              <td><input type="text" id="nome" name="nome" placeholder="Seu nome" required minlength="3" maxlength="80" /></td>
+            </tr>
+            <tr>
+              <td class="label"><label for="email">E-mail <span class="required">*</span></label></td>
+              <td><input type="email" id="email" name="email" placeholder="voce@exemplo.com" required /></td>
+            </tr>
+            <tr>
+              <td class="label"><label for="telefone">Telefone (WhatsApp)</label></td>
+              <td>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000"
+                       pattern="\(\d{2}\)\s?9?\d{4}-\d{4}" aria-describedby="telHint" />
+                <div id="telHint" class="hint">Formato sugerido: (11) 90000-0000</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="nascimento">Data de nascimento</label></td>
+              <td><input type="date" id="nascimento" name="nascimento" /></td>
+            </tr>
+            <tr>
+              <td class="label"><label for="pedido">Nº do pedido</label></td>
+              <td><input type="number" id="pedido" name="pedido" min="1" step="1" placeholder="Se aplicável" /></td>
+            </tr>
+          </table>
+        </fieldset>
+
+        <fieldset>
+          <legend>Assunto a ser tratado</legend>
+          <table role="presentation">
+            <tr>
+              <td class="label"><label for="assunto">Assunto <span class="required">*</span></label></td>
+              <td>
+                <select id="assunto" name="assunto" required>
+                  <option value="">Selecione...</option>
+                  <option value="duvida">Dúvida</option>
+                  <option value="suporte">Suporte técnico</option>
+                  <option value="troca">Troca/Devolução</option>
+                  <option value="elogio">Elogio</option>
+                  <option value="reclamacao">Reclamação</option>
+                  <option value="outros">Outros</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mensagem</legend>
+          <table role="presentation">
+            <tr>
+              <td class="label"><label for="mensagem">Detalhes <span class="required">*</span></label></td>
+              <td><textarea id="mensagem" name="mensagem" placeholder="Descreva sua solicitação..." required minlength="10" maxlength="1000"></textarea></td>
+            </tr>
+            <tr>
+              <td class="label"><label for="anexo">Anexar arquivo (opcional)</label></td>
+              <td>
+                <input type="file" id="anexo" name="anexo" accept=".jpg,.jpeg,.png,.pdf" />
+                <div class="hint">Extensões permitidas: .jpg, .png, .pdf</div>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="row-actions">
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 Loja Tech - Eletrônicos — Todos os direitos reservados.</small>
+  </footer>
+</body>
+</html>
