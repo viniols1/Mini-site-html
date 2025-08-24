@@ -15,7 +15,9 @@ https://github.com/viniols1/mini-site-html.git
 2. Abra o arquivo `index.html` em qualquer navegador.
 
 ## 📂 Estrutura do projeto
-
+- index.html
+- produtos.html
+- contato.html
 ## 👤 Autor
 Vinicius Oliveira  
 Projeto desenvolvido para fins de estudo e prática de HTML.
