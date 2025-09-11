@@ -3,11 +3,11 @@ html { font-size: 16px; }
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: #e5e7eb;               /* cinza claro para contraste */
+  color: #e5e7eb;               
   background:
     radial-gradient(1200px 800px at 15% 10%, #1f2937 0%, transparent 55%),
     radial-gradient(1000px 700px at 85% 90%, #111827 0%, transparent 50%),
-    linear-gradient(#000000, #0b0b0b); /* preto + cinza escuro misturados */
+    linear-gradient(#000000, #0b0b0b); 
   line-height: 1.6;
 }
 
@@ -114,3 +114,4 @@ footer {
   nav { gap: .5rem; }
   header h1 { font-size: 1.35rem; }
 }
+
