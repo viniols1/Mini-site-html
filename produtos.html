@@ -1,34 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Produtos - Loja Vinicius Tech</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Loja Vinicius Tech — Produtos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: #f3f4f6; line-height: 1.6;
+      background:
+        linear-gradient(rgba(0,0,0,.70), rgba(0,0,0,.70)),
+        url("notebook.jpg.jpg") center/cover no-repeat fixed;
+    }
+    a { color: #93c5fd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { position: sticky; top: 0; z-index: 10; background: rgba(0,0,0,.8); border-bottom: 1px solid #1f2937; }
+    nav { position: sticky; top: 56px; background: rgba(0,0,0,.75); border-bottom: 1px solid #111827; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 1rem 1.25rem; }
+    .menu { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .menu a { padding: .45rem .70rem; border-radius: .5rem; color:#e5e7eb; }
+    .menu a[aria-current="page"], .menu a:hover { background:#111827; }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 1.25rem; }
+
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card {
+      position: relative;
+      background: rgba(17,24,39,.80);
+      border: 1px solid #0b1220; border-radius: 14px; padding: 1rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,.35);
+    }
+    .badge { position: absolute; top: 10px; right: 10px; background: #ef4444; color: #fff; padding: .25rem .5rem; border-radius: 999px; font-size: .75rem; font-weight: 700; }
+    .thumb { width: 100%; height: auto; border-radius: 10px; border: 1px solid #0b1220; }
+    .price { font-weight: 800; color: #a7f3d0; }
+    .section-gap { margin-top: 1rem; }
+
+    footer { margin-top: 2rem; padding: 1rem 0; border-top: 1px solid #1f2937; background: rgba(0,0,0,.6); }
+
+    #topo {
+      position: fixed; right: 16px; bottom: 16px; z-index: 20;
+      background: #0ea5e9; color: #001018; border: none;
+      padding: .6rem .8rem; border-radius: 10px; font-weight: 700; cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    }
+    #topo:hover { filter: brightness(1.1); }
+  </style>
 </head>
-<body>
-    <h1>Produtos - Loja Vinicius Tech</h1>
-    <p>
-        <a href="index.html">Voltar à Página Inicial</a> | 
-        <a href="contato.html">Fale Conosco</a>
-    </p>    
-    
-    <p>Confira nossa lista completa de produtos eletrônicos.</p>
+<body id="top">
+  <header>
+    <div class="wrap">
+      <h1 style="margin:0">Loja Vinicius Tech — Produtos</h1>
+    </div>
+  </header>
 
-    <h2>Lista Completa</h2>
-    <ol>
-        <li>Notebook</li>
-        <li>Headset Bluetooth</li>
-        <li>Mouse sem fio</li>
-    </ol>
+  <nav aria-label="Navegação principal">
+    <div class="wrap menu">
+      <a href="index.html">Home</a>
+      <a href="produtos.html" aria-current="page">Produtos</a>
+      <a href="contato.html">Contato</a>
+    </div>
+  </nav>
 
-    <figure>
-        <img src="notebook.jpg.jpg" alt="Notebook" width="200">
-        <img src="headset.jpg.jpg" alt="Headset Bluetooth" width="200">
-        <img src="mouse.jpg.jpg" alt="Mouse sem fio" width="200"
+  <main>
+    <section class="grid" aria-label="Lista de produtos">
+      <article class="card">
+        <span class="badge">-10%</span>
+        <h2>Notebook</h2>
+        <img class="thumb" src="notebook.jpg.jpg" alt="Notebook" />
+        <p>CPU moderna, SSD e bateria de longa duração.</p>
+        <p class="price">R$ 3.999,00</p>
+      </article>
 
-    </figure>
-    
+      <article class="card">
+        <span class="badge">-5%</span>
+        <h2>Headset Bluetooth</h2>
+        <img class="thumb" src="headset.jpg.jpg" alt="Headset Bluetooth" />
+        <p>Som imersivo e microfone com redução de ruído.</p>
+        <p class="price">R$ 249,00</p>
+      </article>
+
+      <article class="card">
+        <span class="badge">-8%</span>
+        <h2>Mouse sem fio</h2>
+        <img class="thumb" src="mouse.jpg.jpg" alt="Mouse sem fio" />
+        <p>Ergonômico, leve e com alta precisão.</p>
+        <p class="price">R$ 99,00</p>
+      </article>
+    </section>
+
+    <section class="card section-gap">
+      <h2>Outras informações</h2>
+      <ol>
+        <li>Garantia de 12 meses.</li>
+        <li>Envio em até 24h úteis.</li>
+        <li>Suporte especializado.</li>
+      </ol>
+      <p><a href="index.html">Voltar à Home</a> • <a href="contato.html">Fale Conosco</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2025 Loja Vinicius Tech</div>
+  </footer>
+
+  <button id="topo" onclick="location.hash='#top'">Topo ↑</button>
 </body>
 </html>
+
 
