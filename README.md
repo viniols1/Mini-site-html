@@ -18,14 +18,14 @@ O resultado é um site estático simples, mas funcional, que consolida conceitos
 ## 🗂️ Estrutura do Repositório
 
 Mini-site-html/
-├── index.html # Página inicial com apresentação e vídeo
-├── produtos.html # Página de produtos com catálogo ilustrado
-├── contato.html # Página de contato com formulário
-├── headset.jpg.jpg # Imagem de produto (ajustar nome)
-├── mouse.jpg.jpg # Imagem de produto (ajustar nome)
-├── notebook.jpg.jpg # Imagem de produto (ajustar nome)
-├── video-notebook.mp4.mp4 # Vídeo demonstrativo (ajustar nome)
-└── README.md
+index.html # Página inicial com apresentação e vídeo
+produtos.html # Página de produtos com catálogo ilustrado
+contato.html # Página de contato com formulário
+headset.jpg.jpg # Imagem de produto (ajustar nome)
+mouse.jpg.jpg # Imagem de produto (ajustar nome)
+notebook.jpg.jpg # Imagem de produto (ajustar nome)
+video-notebook.mp4.mp4 # Vídeo demonstrativo (ajustar nome)
+README.md
 
 ---
 
