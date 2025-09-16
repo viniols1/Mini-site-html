@@ -2,108 +2,147 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
+  <title>Loja Vinicius Tech — Contato</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contato | Loja Tech</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="styles.css">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: #f3f4f6; line-height: 1.6;
+      background:
+        linear-gradient(rgba(0,0,0,.70), rgba(0,0,0,.70)),
+        url("notebook.jpg.jpg") center/cover no-repeat fixed;
+    }
+    a { color: #93c5fd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { position: sticky; top: 0; z-index: 10; background: rgba(0,0,0,.8); border-bottom: 1px solid #1f2937; }
+    nav { position: sticky; top: 56px; background: rgba(0,0,0,.75); border-bottom: 1px solid #111827; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 1rem 1.25rem; }
+    .menu { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .menu a { padding: .45rem .70rem; border-radius: .5rem; color:#e5e7eb; }
+    .menu a[aria-current="page"], .menu a:hover { background:#111827; }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 1.25rem; }
+
+    .card {
+      position: relative;
+      background: rgba(17,24,39,.85);
+      border: 1px solid #0b1220; border-radius: 14px; padding: 1rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,.35);
+    }
+    h2 { margin-top: 0; }
+
+    form { display: grid; gap: .85rem; }
+    fieldset { border: 1px solid #0b1220; border-radius: 12px; padding: 1rem; }
+    legend { padding: 0 .5rem; color: #cbd5e1; }
+
+    label { display: block; margin-bottom: .25rem; color: #e5e7eb; }
+    input, textarea, select {
+      width: 100%; padding: .65rem .75rem; border-radius: 10px;
+      border: 1px solid #0b1220; background: #0b1220; color: #f3f4f6;
+    }
+    input:focus, textarea:focus, select:focus { outline: 2px solid #0ea5e9; }
+
+    .row { display: grid; gap: .75rem; grid-template-columns: 1fr 1fr; }
+    .actions { display: flex; gap: .75rem; justify-content: flex-end; }
+    button { border: 0; border-radius: 10px; padding: .7rem 1rem; font-weight: 700; cursor: pointer; }
+    .primary { background: #0ea5e9; color: #001018; }
+    .ghost   { background: transparent; color: #cbd5e1; border: 1px solid #1f2937; }
+    .hint { color: #cbd5e1; }
+    .required { color: #fca5a5; font-weight: 800; }
+    .section-gap { margin-top: 1rem; }
+
+    footer { margin-top: 2rem; padding: 1rem 0; border-top: 1px solid #1f2937; background: rgba(0,0,0,.6); }
+
+    #topo {
+      position: fixed; right: 16px; bottom: 16px; z-index: 20;
+      background: #0ea5e9; color: #001018; border: none;
+      padding: .6rem .8rem; border-radius: 10px; font-weight: 700; cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    }
+    #topo:hover { filter: brightness(1.1); }
+    @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+  </style>
 </head>
-<body>
+<body id="top">
   <header>
-    <h1>Loja Tech - Eletrônicos — Contato</h1>
+    <div class="wrap">
+      <h1 style="margin:0">Loja Vinicius Tech — Contato</h1>
+    </div>
   </header>
 
   <nav aria-label="Navegação principal">
-    <a href="index.html">Home</a>
-    <a href="produtos.html">Produtos</a>
-    <a href="contato.html" aria-current="page">Contato</a>
+    <div class="wrap menu">
+      <a href="index.html">Home</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="contato.html" aria-current="page">Contato</a>
+    </div>
   </nav>
 
   <main>
     <section class="card" aria-labelledby="titulo-form">
       <h2 id="titulo-form">Fale Conosco</h2>
-      <p class="hint">Todos os campos marcados com <span class="required">*</span> são obrigatórios.</p>
+      <p class="hint">Campos com <span class="required">*</span> são obrigatórios.</p>
 
+      <!-- Formulário com atributos HTML5 -->
       <form action="#" method="post" autocomplete="on" novalidate>
         <fieldset>
           <legend>Dados do solicitante</legend>
-          <table role="presentation">
-            <tr>
-              <td class="label"><label for="nome">Nome completo <span class="required">*</span></label></td>
-              <td><input type="text" id="nome" name="nome" placeholder="Seu nome" required minlength="3" maxlength="80" /></td>
-            </tr>
-            <tr>
-              <td class="label"><label for="email">E-mail <span class="required">*</span></label></td>
-              <td><input type="email" id="email" name="email" placeholder="voce@exemplo.com" required /></td>
-            </tr>
-            <tr>
-              <td class="label"><label for="telefone">Telefone (WhatsApp)</label></td>
-              <td>
-                <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000"
-                       pattern="\(\d{2}\)\s?9?\d{4}-\d{4}" aria-describedby="telHint" />
-                <div id="telHint" class="hint">Formato sugerido: (11) 90000-0000</div>
-              </td>
-            </tr>
-            <tr>
-              <td class="label"><label for="nascimento">Data de nascimento</label></td>
-              <td><input type="date" id="nascimento" name="nascimento" /></td>
-            </tr>
-            <tr>
-              <td class="label"><label for="pedido">Nº do pedido</label></td>
-              <td><input type="number" id="pedido" name="pedido" min="1" step="1" placeholder="Se aplicável" /></td>
-            </tr>
-          </table>
-        </fieldset>
 
-        <fieldset>
-          <legend>Assunto a ser tratado</legend>
-          <table role="presentation">
-            <tr>
-              <td class="label"><label for="assunto">Assunto <span class="required">*</span></label></td>
-              <td>
-                <select id="assunto" name="assunto" required>
-                  <option value="">Selecione...</option>
-                  <option value="duvida">Dúvida</option>
-                  <option value="suporte">Suporte técnico</option>
-                  <option value="troca">Troca/Devolução</option>
-                  <option value="elogio">Elogio</option>
-                  <option value="reclamacao">Reclamação</option>
-                  <option value="outros">Outros</option>
-                </select>
-              </td>
-            </tr>
-          </table>
-        </fieldset>
+          <div class="row">
+            <div>
+              <label for="nome">Nome completo <span class="required">*</span></label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required minlength="3" maxlength="80" />
+            </div>
+            <div>
+              <label for="email">E-mail <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="voce@email.com" required />
+            </div>
+          </div>
 
-        <fieldset>
-          <legend>Mensagem</legend>
-          <table role="presentation">
-            <tr>
-              <td class="label"><label for="mensagem">Detalhes <span class="required">*</span></label></td>
-              <td><textarea id="mensagem" name="mensagem" placeholder="Descreva sua solicitação..." required minlength="10" maxlength="1000"></textarea></td>
-            </tr>
-            <tr>
-              <td class="label"><label for="anexo">Anexar arquivo (opcional)</label></td>
-              <td>
-                <input type="file" id="anexo" name="anexo" accept=".jpg,.jpeg,.png,.pdf" />
-                <div class="hint">Extensões permitidas: .jpg, .png, .pdf</div>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td class="row-actions">
-                <button type="reset">Limpar</button>
-                <button type="submit">Enviar</button>
-              </td>
-            </tr>
-          </table>
+          <div class="row">
+            <div>
+              <label for="tel">Telefone</label>
+              <input type="tel" id="tel" name="tel" placeholder="(11) 99999-0000" pattern="\\(\\d{2}\\)\\s?\\d{4,5}-\\d{4}" autocomplete="tel" />
+            </div>
+            <div>
+              <label for="assunto">Assunto <span class="required">*</span></label>
+              <select id="assunto" name="assunto" required>
+                <option value="">Selecione…</option>
+                <option>Suporte</option>
+                <option>Orçamento</option>
+                <option>Parcerias</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="msg">Mensagem <span class="required">*</span></label>
+            <textarea id="msg" name="mensagem" placeholder="Descreva sua necessidade..." rows="5" required minlength="10" maxlength="1000"></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="reset" class="ghost">Limpar</button>
+            <button type="submit" class="primary">Enviar</button>
+          </div>
         </fieldset>
       </form>
+    </section>
+
+    <section class="card section-gap">
+      <h2>Navegação</h2>
+      <p><a href="index.html">Voltar à Home</a> • <a href="produtos.html">Ver Produtos</a></p>
     </section>
   </main>
 
   <footer>
-    <small>&copy; 2025 Loja Tech - Eletrônicos — Todos os direitos reservados.</small>
+    <div class="wrap">© 2025 Loja Vinicius Tech</div>
   </footer>
+
+  <button id="topo" onclick="location.hash='#top'">Topo ↑</button>
 </body>
 </html>
+
 
