@@ -131,7 +131,6 @@
     }
   };
 
-  
   const seedProducts = [
     { id:"Notebook", title:"Notebook", price:3499.00, img:"notebook.jpg.jpg", stock:7, tags:["computador"] },
     { id:"Headset",  title:"Headset Bluetooth", price:249.00, img:"headset.jpg.jpg", stock:15, tags:["audio"] },
@@ -151,7 +150,6 @@
     });
     return items;
   };
-
 
   const cart = {
     state: { items: [], coupon: store.get(K.COUPON, null) },
@@ -289,7 +287,6 @@
     close(){ $(".drawer")?.classList.remove("open"); $(".drawer")?.setAttribute("aria-hidden","true"); }
   };
 
-  
   const globalUI = {
     init(){
       ensureStyles();
@@ -475,3 +472,4 @@
     boot();
   }
 })();
+
